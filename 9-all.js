@@ -9,19 +9,19 @@ inquirer
     },
     {
       type: 'list',
-      name: 'reptile',
+      name: 'reptile-list',
       message: 'Basic list example',
       choices: ['alligator', 'crocodile'],
     },
     {
       type: 'rawlist',
-      name: 'reptile',
+      name: 'reptile-rawlist',
       message: 'Rawlist example',
       choices: ['alligator', 'crocodile'],
     },
     {
       type: 'expand',
-      name: 'reptile',
+      name: 'reptile-expand',
       message: 'Expand example',
       choices: [
         {
@@ -36,7 +36,7 @@ inquirer
     },
     {
       type: 'checkbox',
-      name: 'reptiles',
+      name: 'reptile-checkbox',
       message: 'Here\'s a checkbox example',
       choices: [
         'Alligators', 'Snakes', 'Turtles', 'Lizards',
@@ -55,4 +55,7 @@ inquirer
   ])
   .then(answers => {
     console.info('Answers:', answers);
+    console.info('Fav reptile:', answers.faveReptile)
+    console.info('Story:', answers.story)
   });
+
